@@ -42,7 +42,7 @@ module.exports = router => {
                                             });
                                     })
     });
-    router.post("/generateAddress", (req, res1) => {
+    router.get("/generateAddress", (req, res1) => {
         
         multichain.getNewAddress((err, res) => {
             console.log(res)
@@ -60,7 +60,7 @@ module.exports = router => {
     
     })
 
-    router.post("/getAddress", (req, res1) => {
+    router.get("/getAddress", (req, res1) => {
         
         multichain.getAddresses((err, res) => {
             console.log(res)
